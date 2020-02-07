@@ -63,7 +63,7 @@
     </div>
     <div class="content-container">
         <div class="sidebar">
-            <a href="{{ route('homepage') }}">home</a>
+            <a href="{{ route('frontpage') }}">home</a>
         </div>
         <div class="content">
             @yield('content')
