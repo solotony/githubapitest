@@ -48,7 +48,9 @@ class GitgubController extends Controller
             $order = 'desc';
         }
 
-        $url = self::$base . '/search/repositories?' . http_build_query(['q' => $request->qry, 'sort'=>$sort, 'order'=>$order, 'page'=>$request->p]);
+        $page = $request->p + 1;
+
+        $url = self::$base . '/search/repositories?' . http_build_query(['q' => $request->qry, 'sort'=>$sort, 'order'=>$order, 'page'=>$page]);
 
         curl_setopt_array($ch, [
             CURLOPT_URL => $url,
